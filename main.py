@@ -17,15 +17,24 @@ def main():
 
             respuesta = int(input("Ingrese su opcion: "))
             if respuesta == 1:
-                AgregarProducto()
+                añadir_cantidad = int(input("Ingrese la cantidad de su producto: "))
+                añadir_producto = input("Ingrese el nombre de su producto: ")
+                añadir_precio = float(input("Ingrese el precio de su producto: "))
+                AgregarProducto(añadir_cantidad,añadir_producto,añadir_precio)
             elif respuesta == 2:
-                print(Buscar_producto())
+                buscador = input("Ingrese el nombre del producto que quiere buscar: ")
+                print(Buscar_producto(buscador))
             elif respuesta == 3:
-                Modificar_Producto()
+                buscador = input("Ingrese el nombre del producto que quiere modificar: ")
+                añadir_cantidad = int(input("Ingrese la cantidad de su producto: "))
+                añadir_producto = input("Ingrese el nombre de su producto: ")
+                añadir_precio = float(input("Ingrese el precio de su producto: "))
+                Modificar_Producto(buscador,añadir_cantidad,añadir_producto,añadir_precio)
             elif respuesta == 4:
                 print(Mostrar_Producto())
             elif respuesta == 5:
-                Borrar_Producto()
+                buscador = input("Ingrese el nombre del producto que quiere borrar: ")
+                print(Borrar_Producto(buscador))
             elif respuesta == 6:
                 Exportar_Excel()
             else:
